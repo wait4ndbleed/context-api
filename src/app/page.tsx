@@ -9,13 +9,14 @@ export default function Home() {
 
   return (
     <main>
+      <div className="mb-20">
       {state.user.name && (
-        <span className="block mb-20">
+        <>
           Tela SignUp de {state.user.name} que tem {state.user.age} anos.
-        </span>
+        </>
       )}
-      {!state.user.name && 'Não há informações'}
-      <br />
+      {!state.user.name && "Não há informações"}
+      </div>
       <Link href="/cadastro">Alterar cadastro</Link>
     </main>
   );
